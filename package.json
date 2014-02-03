@@ -26,8 +26,8 @@
     }
   ],
   "devDependencies": {
-    "mocha": "~1.8.2",
-    "async": "0.2.6",
+    "mocha": "~1.17.1",
+    "async": "~0.2.10",
     "redis": "~0.10.0",
     "should": "~3.1.2"
   }
