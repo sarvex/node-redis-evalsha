@@ -1,6 +1,6 @@
 {
   "name": "redis-evalsha",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "description": "Convenience wrapper for Redis EVAL/EVALSHA",
   "keywords": [
     "redis",
