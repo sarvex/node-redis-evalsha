@@ -14,8 +14,7 @@ Shavaluator.prototype.add = function(name, body) {
   };
 };
 
-Shavaluator.prototype.exec = function(name, keys, args, callback) {
-  var redisClient = this.redisClient;
+Shavaluator.prototype.execWithClient = function(redisClient, name, keys, args, callback) {
   var script = this.scripts[name];
   if (!script) return process.nextTick(errorScriptNotFound);
 
@@ -36,6 +35,10 @@ Shavaluator.prototype.exec = function(name, keys, args, callback) {
   function errorScriptNotFound() {
     callback(new Error("unrecognized script name: " + name));
   }
+}
+
+Shavaluator.prototype.exec = function(name, keys, args, callback) {
+  return this.execWithClient(this.redisClient, name, keys, args, callback);
 };
 
 function sha1(string) {
