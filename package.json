@@ -1,5 +1,5 @@
 {
-  "name": "shavaluator",
+  "name": "redis-evalsha",
   "version": "0.0.2",
   "description": "Convenience wrapper for Redis EVAL/EVALSHA",
   "keywords": [
