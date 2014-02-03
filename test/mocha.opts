@@ -3,6 +3,5 @@
 --ui bdd
 --colors
 --growl
---compilers coffee:coffee-script
 --slow 300
 --globals item
