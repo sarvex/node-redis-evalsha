@@ -20,6 +20,7 @@ for these reasons:
    * coffee-script is dumb
    * use redis `sendCommand` instead of `eval` method as it tries to be too
      smart and check the sha that we already computed.
+   * ability to use same instance with multiple redis instances
 
 #### Example
 
