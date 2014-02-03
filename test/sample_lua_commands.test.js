@@ -1,4 +1,3 @@
-var _ = require('underscore');
 var should = require('should');
 var Shavaluator = require('..');
 var testHelper = require('./test_helper');
