@@ -21,7 +21,7 @@ Shavaluator.prototype.execWithClient = function(redisClient, name, keys, args, c
   var params = [script.hash, keys.length].concat(keys).concat(args);
   redisClient.evalsha(params, function(err, res) {
     if (err) {
-      if (/^NOSCRIPT /.test(err.message)) {
+      if (/NOSCRIPT/.test(err.message)) {
         var params = [script.body, keys.length].concat(keys).concat(args);
         redisClient.send_command('eval', params, callback);
       } else {
